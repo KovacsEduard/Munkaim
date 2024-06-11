@@ -1,0 +1,374 @@
+html {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* card */
+
+.kartyak {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.kartya {
+    height: 500px;
+    width: 29%;
+    margin: 10px;
+    background-color: var(--card-color);
+    text-align: left;
+    position: relative;
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 1px 2px 0 var(--cardshadow), 0 1.5px 5px 0 var(--cardshadow2);
+    color: var(--textandbtn-color);
+}
+
+.kartya:hover {
+    box-shadow: 0 4px 8px 0 var(--cardshadow), 0 6px 20px 0 var(--cardshadow2);
+}
+
+@media only screen and (min-width: 2600px) {
+    .kartya {
+        height: auto;
+        margin-bottom: 5% !important;
+    }
+}
+
+@media only screen and (max-width: 2600px) {
+    .kartya {
+        height: 500px;
+        margin-bottom: 5% !important;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .kartya {
+        height: 400px !important;
+        margin-bottom: 5% !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .kartya {
+        height: 300px !important;
+        margin-bottom: 5% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .kartya {
+        width: 90%;
+        height: 400px !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .kartya {
+        height: 300px !important;
+        margin-bottom: 5% !important;
+    }
+}
+
+.cardbtntext{
+    display: inline-block;
+    padding: 10px;
+    color: var(--btntext-color);
+    text-align: center;
+    transition: 0.3s ease;
+    transition: color 0.3s ease;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--textandbtn-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+}
+
+.cardbtn{
+    width: auto;
+    height: 40px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background-color: transparent;
+    padding-left: 5%;
+    padding-top: 300px;
+    
+}
+
+.cardbtn:hover{
+    transform: scale(1.07);
+}
+
+.cardbtntext:hover{
+    border-radius: 7px;
+}
+
+.textcard {
+    text-align: left;
+    padding-left: 5%;
+}
+
+
+/* nav */
+
+nav {
+    width: 100%;
+    background-color: var(--nav-color);
+}
+
+nav ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+    background-color: var(--navli-color);
+}
+
+nav ul li:hover {
+    background-color: var(--navlihover-color);
+
+}
+
+nav ul li a {
+    color: var(--navtext-color);
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--navtext-color);
+}
+
+.toggle {
+    width: 100%;
+    padding: 10px 20px;
+    background: var(--toggle-color);
+    text-align: right;
+    box-sizing: border-box;
+    font-size: 30px;
+    display: none;
+}
+
+#dark{
+    padding: 0;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+}
+
+#dark:hover{
+    background-color: transparent;
+}
+
+@media (max-width:768px) {
+    .toggle {
+        display: block;
+    }
+
+    nav ul {
+        width: 100%;
+        display: none;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        transition: transform 0.3s ease;
+        transition: background-color 0.5s ease;
+
+    }
+    nav ul li:hover{
+        transform: scale(1.05);
+        background-color: var(--navlihover-color);
+    }
+
+    .active {
+        display: block;
+    }
+
+    #dark{
+        position: static;
+        margin-right: 0px;
+    }
+
+    #icon{
+        height: 44px;
+        padding: 5px 0px 5px 0px;
+    }
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: var(--burger-color);
+    margin: 6px 0;
+}
+
+.menu{
+        transition: transform 0.3s ease;
+        width: fit-content;
+}
+
+.menu:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+
+
+/* paralax */
+
+body{
+    background-image: url(kepek/background-img.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+
+/* sticky header */
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header{
+    z-index: 1;
+}
+
+
+
+/* chat */
+
+.open-button {
+    background-color: var(--popupopen);
+    color: var(--btntext-color);
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+  
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid var(--popupborder);
+    z-index: 9;
+}
+  
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: var(--card-color);
+    color: var(--textandbtn-color);
+}
+  
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: var(--popuptextarea);
+    resize: none;
+    min-height: 200px;
+    color: var(--textandbtn-color);
+}
+  
+.form-container textarea:focus {
+    background-color: var(--popupfocus);
+    outline: none;
+    color: var(--textandbtn-color);
+}
+  
+.form-container .btn {
+    background-color: #04AA6D;
+    color: var(--textandbtn-color);
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+  
+.form-container .cancel {
+    background-color: red;
+}
+  
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+
+
+/* dark-mode */
+
+#icon{
+    cursor: pointer;
+    height: 54px;
+}
+
+
+:root{
+    --card-color: rgba(249, 249, 209, 0.896);
+    --textandbtn-color: black;
+    --btntext-color: white;
+    /* --cardspan-color: #111; */
+    --nav-color: rgba(255, 255, 209, 0.6);
+    --burger-color: rgb(0, 0, 0);
+    --toggle-color: transparent;
+    --navtext-color: black;
+    --navli-color: transparent;
+    --navlihover-color: rgba(255, 255, 241, 0.796);
+    --popupopen: #363636;
+    --popupborder: #f1f1f1;
+    --popupfocus: #ddd;
+    --popuptextarea:#f1f1f1;
+    --cardshadow: rgba(0, 0, 0, 0.2);
+    --cardshadow2: rgba(0, 0, 0, 0.19);
+}
+
+.dark-theme{
+    --card-color: rgba(87, 87, 74, 0.896);
+    --textandbtn-color: rgb(255, 255, 255);
+    --btntext-color: rgb(0, 0, 0);
+    /* --cardspan-color: #e2e2e2; */
+    --nav-color: rgba(119, 119, 94, 0.601);
+    --burger-color: rgb(255, 255, 255);
+    --toggle-color: transparent;
+    --navtext-color: white;
+    --navli-color: transparent;
+    --navlihover-color: rgba(145, 145, 115, 0.706);
+    --popupopen: #d5d5d5;
+    --popupborder: #282828;
+    --popupfocus: #434343;
+    --popuptextarea:#383838;
+    --cardshadow: rgba(255, 249, 249, 0.207);
+    --cardshadow2: rgba(255, 255, 255, 0.195);
+}
