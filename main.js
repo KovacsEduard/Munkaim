@@ -89,6 +89,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-function backdropFilter() {
-    document.getElementById("toastdiv").style.background = "transparent";
+function delete_element() {
+    element = document.getElementById("toastdiv");
+    element.remove();
 }
